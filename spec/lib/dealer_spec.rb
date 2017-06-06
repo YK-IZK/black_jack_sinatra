@@ -18,5 +18,16 @@ describe Dealer do
         expect(@dealer.deck.length).to eq(51)
       end
     end
+
+    describe 'make_deck method' do
+      before do
+        @dealer.deal
+      end
+
+      it 'returns a cards array whose length is 52' do
+        expect(@dealer.make_deck.length).to eq(52)
+      end
+
+    end
   end
 end
