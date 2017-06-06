@@ -1,0 +1,12 @@
+div.hands {
+  border: thick #000 solid;
+}
+
+div.info {
+  color: #f00;
+}
+
+img.card {
+  width: 100px;
+  height: 150px;
+}

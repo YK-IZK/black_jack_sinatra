@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset = "utf-8">
+  <title>Black Jack</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+<body>
+  <div class="hands">
+    <% @player.hands.each do |hand| %>
+      <img src="images/cards/<%= hand.suit + format('%02d', hand.rank) %>.png" class="card">
+    <% end %>
+  </div>
+
+  <div class="score">
+    <h2><%= "#{@player.name} : #{@player.calc_score}" %></h2>
+  </div>
+
+  <form action="/" method="GET">
+    <input class="button" type=submit value="reset">
+  </form>
+</body>
